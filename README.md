@@ -3,8 +3,8 @@ This is an implementation for our paper ["MFIF-GAN: A New Generative Adversarial
 ## Usage
 ### Data preparation
 If you want to train MFIF-GAN on the proposed synthetic dataset based on an $\alpha$-matte model. Please download the [Pascal VOC2012](https://pjreddie.com/projects/pascal-voc-dataset-mirror/) and:
-* follow the ```data_prepare.py``` to transform the ''segmentationclass'' image to ''focus_map_png'' and extract ''image_jpg'' from ''JPEGImage'' corresponding to ''focus_map_png''
-* follow the ```data_generation.m``` to use ''focus_map'' and ''image_jpg'' to generate the training dataset ''A_jpg'' and ''B_jpg''
+* follow the ```data_preparation/VOC_prepare.py``` to extract ''image_jpg'' from ''JPEGImage'' corresponding to ''SegmentationClass'' and .
+* follow the ```data_preparation/data_generation.m``` to transform the ''SegmentationClass'' image to ''focus_map_png'' and use ''focus_map_png'' and ''image_jpg'' to generate the training dataset ''A_jpg'' and ''B_jpg''.
 ### Training
 
 
