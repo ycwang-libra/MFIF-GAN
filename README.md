@@ -1,14 +1,29 @@
 # MFIF-GAN
 This is an implementation for our paper ["MFIF-GAN: A New Generative Adversarial Network for Multi-Focus Image Fusion"](https://www.sciencedirect.com/science/article/abs/pii/S0923596521001260).
+
 ## Usage
 ### Data preparation
-If you want to train MFIF-GAN on the proposed synthetic dataset based on an $\alpha$-matte model. Please download the [Pascal VOC2012](https://pjreddie.com/projects/pascal-voc-dataset-mirror/) and:
-* follow the ```data_preparation/VOC_prepare.py``` to extract ''image_jpg'' from ''JPEGImage'' corresponding to ''SegmentationClass'' and .
-* follow the ```data_preparation/data_generation.m``` to transform the ''SegmentationClass'' image to ''focus_map_png'' and use ''focus_map_png'' and ''image_jpg'' to generate the training dataset ''A_jpg'' and ''B_jpg''.
+If you want to train MFIF-GAN on the proposed synthetic dataset based on an $\alpha$-matte model. Please download the [Pascal VOC2012](https://pjreddie.com/projects/pascal-voc-dataset-mirror/) and then:
+
+* follow the [data_preparation/VOC_prepare.py](data_preparation/VOC_prepare.py) to extract ''image_jpg'' from ''JPEGImage'' corresponding to ''SegmentationClass''.
+* follow the [data_preparation/data_generation.m](data_preparation/data_generation.m) to transform the ''SegmentationClass'' image to ''focus_map_png''. Then use ''focus_map_png'' and ''image_jpg'' to generate the training dataset ''A_jpg'' and ''B_jpg''.
+  
 ### Training
+Use this dataset to train your MFIF-GAN, which may have better performance than ours:
+```bash
+python main.py --mode train --root_train [training data path]
+```
 
+### Testing with pre-trained model
+The pre-trained models are also provided as [MFIF-GAN/models/110000-D.ckpt](MFIF_GAN/models/110000-D.ckpt) and [MFIF-GAN/models/110000-G.ckpt](MFIF_GAN/models/110000-G.ckpt). You can use
+```bash
+python main.py --mode test --batch_size 1 --test_iters 110000 --test_dataset Lytro --root_test [test data path]
+```
+to fuse ```Lytro``` or other multi-focus images.
+### Results
+And we provide our test results in [Fusion_results](Fusion_results).
 
-## Citation MFIF-GAN
+## Citing MFIF-GAN
 If you find this work useful for your research, please cite our [paper](https://www.sciencedirect.com/science/article/abs/pii/S0923596521001260):
 ```
 @article{wang2021mfif,
