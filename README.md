@@ -2,6 +2,21 @@
 This is an implementation for our paper ["MFIF-GAN: A New Generative Adversarial Network for Multi-Focus Image Fusion"](https://www.sciencedirect.com/science/article/abs/pii/S0923596521001260).
 
 ## Usage
+## Install
+- Clone this repo:
+```bash
+git clone https://github.com/ycwang-libra/MFIF-GAN.git
+cd MFIF-GAN
+```
+- Create a conda virtual environment and activate it:
+```bash
+conda create -n MFIF python=3.8 -y
+conda activate MFIF
+```
+- Install `CUDA==10.2` with `cudnn7`
+- Install `PyTorch==1.7.0` and `torchvision==0.8.1` with `CUDA==10.2`
+- Install `matplotlab==3.2.2`, `numpy==1.18.5`
+
 ### Data preparation
 If you want to train MFIF-GAN on the proposed synthetic dataset based on an $\alpha$-matte model. Please download the [Pascal VOC2012](https://pjreddie.com/projects/pascal-voc-dataset-mirror/) and then:
 
