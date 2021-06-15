@@ -19,7 +19,7 @@ The pre-trained models are also provided as [MFIF-GAN/models/110000-D.ckpt](MFIF
 ```bash
 python main.py --mode test --batch_size 1 --test_iters 110000 --test_dataset Lytro --root_test [test data path]
 ```
-to fuse ```Lytro``` or other multi-focus images. And the test result will be located in [MFIF-GAN/Fusion_result](MFIF-GAN/Fusion_result).
+to fuse ```Lytro``` or other multi-focus images. And the test result will be located in [MFIF_GAN/Fusion_result](MFIF_GAN/Fusion_result).
 ### Results
 And we provide our test results on three datasets ('Lytro', 'MFFW', 'Grayscale') in [Fusion_results](Fusion_results).
 
