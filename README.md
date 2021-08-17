@@ -36,7 +36,7 @@ python main.py --mode test --batch_size 1 --test_iters 110000 --test_dataset Lyt
 ```
 to fuse ```Lytro``` or other multi-focus images. And the test result will be located in [MFIF_GAN/Fusion_result](MFIF_GAN/Fusion_result).
 ### Results
-And we provide our test results on three datasets ('Lytro', 'MFFW', 'Grayscale') in [Fusion_results](Fusion_results).
+And we provide our test results on three datasets ('Lytro', 'MFFW', 'Grayscale') in [Results](Results).
 
 ## Citing MFIF-GAN
 If you find this work useful for your research, please cite our [paper](https://www.sciencedirect.com/science/article/abs/pii/S0923596521001260):
